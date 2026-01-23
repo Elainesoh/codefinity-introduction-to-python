@@ -5,3 +5,12 @@ inventory = {
     "Apples": [9, 1.50, 1.35]   # Apples need to be restocked
 }
 
+for item in inventory:
+    current_stock, price, discounted_price = inventory[item]
+    if current_stock < 30:
+        print(f"{item} need restocking.")
+    elif current_stock > 100:
+        print(f'{item} should be sold at the discounted price of {discounted_price}.')
+    elif current_stock>30 and current_stock<100:
+        print(f"{item} should be sold at the regular price of {price}.")
+    
