@@ -1,0 +1,25 @@
+# Dictionary of products with price and quantity sold as strings
+products = {
+    "Apple": ["1.20", "50"],   # "Item": [price, quantity sold]
+    "Banana": ["0.50", "100"],
+    "Cherry": ["2.50", "25"],
+    "Mango": ["1.75", "40"]
+}
+total_sales_list = []
+
+for p, q in products.items():
+    print(float(q[0]))
+    print(int(q[1]))
+    total = (float(q[0]) * int(q[1]))
+    total_sales_list.append(total)
+    print(f"Total sales for {p}: ${total}")
+    
+
+total_sum = (sum(total_sales_list))
+min_sales = (min(total_sales_list))
+max_sales = (max(total_sales_list))
+
+print("Total sum of all sales: $", total_sum)
+print("Minimum sales: $", min_sales)
+print("Maximum sales: $", max_sales)
+
